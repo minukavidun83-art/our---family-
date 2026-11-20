@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>OUR FAMILIES — Bilingual Family Portal</title>
+    <meta name="description" content="A bilingual Sinhala and English family portal for connecting 8 families with photo galleries, birthdays, trips, special events, and real-time family chat." />
+    <meta property="og:title" content="OUR FAMILIES — Bilingual Family Portal" />
+    <meta property="og:description" content="A bilingual Sinhala and English family portal for connecting 8 families with photo galleries, birthdays, trips, special events, and real-time family chat." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/pwa-512x512.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/pwa-512x512.png" />
+    <meta name="theme-color" content="#be123c" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="OurFamilies" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/pwa-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/pwa-512x512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Noto+Sans+Sinhala:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#faf9f7] text-stone-900 dark:bg-[#0f0f12] dark:text-stone-100 antialiased selection:bg-rose-700 selection:text-white">
+    <div id="root"></div>
+    <script>
+      window.__deferredPWAPrompt = null;
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        window.__deferredPWAPrompt = e;
+        window.dispatchEvent(new CustomEvent('pwa-prompt-available'));
+      });
+      window.addEventListener('appinstalled', function () {
+        window.__deferredPWAPrompt = null;
+        try {
+          localStorage.setItem('of_pwa_installed', '1');
+        } catch (err) {}
+        window.dispatchEvent(new CustomEvent('pwa-app-installed'));
+      });
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+node_modules/
+build/
+dist/
+dev-dist/
+data/
+uploads/
+public/assets/aistudio/
+bun.lock
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
